@@ -3,7 +3,6 @@ package com.paulinasadowska.rxworkmanagerobservers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.work.*
 import com.paulinasadowska.rxworkmanagerobservers.extensions.getWorkDatasForUniqueWorkObservable
-import com.paulinasadowska.rxworkmanagerobservers.utils.DEFAULT_DELAY
 import com.paulinasadowska.rxworkmanagerobservers.utils.DEFAULT_DELAY_LONG
 import com.paulinasadowska.rxworkmanagerobservers.utils.initializeTestWorkManager
 import com.paulinasadowska.rxworkmanagerobservers.workers.EchoWorker

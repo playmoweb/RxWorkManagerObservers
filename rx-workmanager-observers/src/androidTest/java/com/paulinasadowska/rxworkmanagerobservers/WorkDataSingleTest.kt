@@ -8,7 +8,6 @@ import androidx.work.testing.WorkManagerTestInitHelper
 import androidx.work.workDataOf
 import com.paulinasadowska.rxworkmanagerobservers.exceptions.WorkFailedException
 import com.paulinasadowska.rxworkmanagerobservers.extensions.getWorkDataByIdSingle
-import com.paulinasadowska.rxworkmanagerobservers.extensions.toWorkDataSingle
 import com.paulinasadowska.rxworkmanagerobservers.utils.DEFAULT_DELAY
 import com.paulinasadowska.rxworkmanagerobservers.utils.createEchoRequest
 import com.paulinasadowska.rxworkmanagerobservers.utils.initializeTestWorkManager
@@ -80,7 +79,7 @@ class WorkDataSingleTest {
                         .setInitialDelay(10, TimeUnit.DAYS)
                         .build()
 
-        val testDriver = WorkManagerTestInitHelper.getTestDriver()
+        val testDriver = WorkManagerTestInitHelper.getTestDriver() ?: throw RuntimeException("No test driver")
 
         //when
         workManager.enqueue(request)

@@ -1,10 +1,11 @@
 package com.paulinasadowska.rxworkmanagerobservers
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.work.*
+import androidx.work.WorkInfo
+import androidx.work.WorkManager
+import androidx.work.workDataOf
 import com.paulinasadowska.rxworkmanagerobservers.exceptions.WorkFailedException
 import com.paulinasadowska.rxworkmanagerobservers.extensions.getWorkInfoByIdObservable
-import com.paulinasadowska.rxworkmanagerobservers.extensions.toWorkInfoObservable
 import com.paulinasadowska.rxworkmanagerobservers.utils.DEFAULT_DELAY
 import com.paulinasadowska.rxworkmanagerobservers.utils.createEchoRequest
 import com.paulinasadowska.rxworkmanagerobservers.utils.initializeTestWorkManager
