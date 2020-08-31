@@ -31,8 +31,8 @@ ext {
     versions.androidX = "1.2.0"
     versions.workManager = "2.4.0"
 
-    versions.rxJava = "2.2.7"
-    versions.rxAndroid = "2.1.1"
+    versions.rxJava = "3.0.5"
+    versions.rxAndroid = "3.0.0"
 }
 
 dependencies {
@@ -46,8 +46,8 @@ dependencies {
     androidTestImplementation "androidx.work:work-testing:$versions.workManager"
 
     // Rx
-    implementation "io.reactivex.rxjava2:rxjava:$versions.rxJava"
-    implementation "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
+    implementation "io.reactivex.rxjava3:rxandroid:$versions.rxAndroid"
+    implementation "io.reactivex.rxjava3:rxjava:$versions.rxJava"
 
     // unit tests
     testImplementation 'junit:junit:4.12'

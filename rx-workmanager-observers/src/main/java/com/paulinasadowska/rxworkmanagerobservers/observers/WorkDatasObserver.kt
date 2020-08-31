@@ -7,13 +7,14 @@ import com.paulinasadowska.rxworkmanagerobservers.exceptions.WorkCancelledExcept
 import com.paulinasadowska.rxworkmanagerobservers.exceptions.WorkException
 import com.paulinasadowska.rxworkmanagerobservers.exceptions.WorkFailedException
 import com.paulinasadowska.rxworkmanagerobservers.observers.base.WorkInfosLiveDataObserver
-import io.reactivex.Observer
+import io.reactivex.rxjava3.core.Observer
 import java.util.*
+import kotlin.collections.HashSet
 
 internal class WorkDatasObserver(
-        private val observer: Observer<in Data>,
-        liveData: LiveData<List<WorkInfo>>,
-        private val ignoreError: Boolean
+    private val observer: Observer<in Data>,
+    liveData: LiveData<List<WorkInfo>>,
+    private val ignoreError: Boolean
 ) : WorkInfosLiveDataObserver(liveData) {
 
     private var succeededIds: MutableSet<UUID> = HashSet()

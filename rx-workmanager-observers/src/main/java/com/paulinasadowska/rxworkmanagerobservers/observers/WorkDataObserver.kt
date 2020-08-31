@@ -6,11 +6,11 @@ import androidx.work.WorkInfo
 import com.paulinasadowska.rxworkmanagerobservers.exceptions.WorkCancelledException
 import com.paulinasadowska.rxworkmanagerobservers.exceptions.WorkFailedException
 import com.paulinasadowska.rxworkmanagerobservers.observers.base.WorkInfoLiveDataObserver
-import io.reactivex.SingleObserver
+import io.reactivex.rxjava3.core.SingleObserver
 
 internal class WorkDataObserver(
-        private val observer: SingleObserver<in Data>,
-        liveData: LiveData<WorkInfo>
+    private val observer: SingleObserver<in Data>,
+    liveData: LiveData<WorkInfo>
 ) : WorkInfoLiveDataObserver(liveData) {
 
     override fun onSucceeded(workInfo: WorkInfo) {
